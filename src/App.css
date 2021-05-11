@@ -1,29 +1,32 @@
 .App {
   text-align: center;
+  border : dashed green;
+  border-width: 2px;
+  border-radius: 5px;
+  padding : 50px;
+  padding-top : 2px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 { /* Style des gros titres*/
+  color:#0099aa;
+  background-color:#DDD;
+  border-style: solid;
+  border-color: red;
+  border-width: 3px;
+  border-radius: 20px;
+}
+h4{
+  font-size:20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h4:hover {
+  font-size : 30px;
+  color:#F5B;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+#comment {
+  font-size: 5em;
+  font-style: oblique;
+  color : orange;
+  font-family:"Lucida Console", "Courier New", monospace;
 }

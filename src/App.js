@@ -1,18 +1,21 @@
+import React from 'react';
 import './App.css';
- 
-/* Hello */
 
-function App() {
-  return (
-    <div className="App">
-      <header className="Recap-zone">
-        <img src="..\img\strong.jpg" className="Recap-img" alt="img" />
-        <p className="recap">
-          Le travail 24/7 ça marche !
-        </p>
-      </header>
-    </div>
-  );
+export default class App extends React.Component {
+
+  render() {
+    return (
+      <div className="App">
+
+        <h1>Bienvenue Visiteur !</h1>
+
+        <h4> Voici ton évolution</h4>
+
+        <img src="img\strong.png" alt="muscle" className="evolution"/>
+
+        <div id="comment">BRAVO !</div>
+
+      </div>
+    );
+  }
 }
-
-export default App;
