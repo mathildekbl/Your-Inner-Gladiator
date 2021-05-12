@@ -1,35 +1,37 @@
 .App {
-  text-align: center;
-  border : solid pink;
-  border-width: 20px;
-  border-radius: 5px;
-  padding : 2%;
-  padding-top : 2px;
-  display:flex; /*Permet d'aligner horizontalement les blocks enfants*/
-  flex-direction: row-reverse;
+  text-align: center; /* Le texte est centré*/
+  border : solid pink; /* Le bord est plein et rose  ....*/
+  border-width: 20px; /* et fait 20px de large */
+  border-radius: 5px; /* Permet d'arrondir les angles, plus c'est grand plus c'est arrondi */
+  padding : 2%; /* Marge interne, le contenu ne peut pas s'approcher à moins de 2% de la taille du bloc du bord*/
+  padding-top : 2px; /* La marge interne supérieure ne fait que 2px*/
+  display:flex; /*Normalement le html met les blocs en colonne, cette commande permet d'être plus flexible dessus*/
+  flex-direction: row-reverse;  /* Les enfants de App seront placés horizonalement dans l'ordre inverse de l'appartion dans le code*/
 }
-.content{
-  width:80%;
+.main_content{
+  width:80%;  /* Le bloc prend 80% de la largeur disponible */
   border:2px solid orange;
 }
 .menu{
   width:20%;
   border:blue solid;
   border-width: 5px;
-  background-color: black;
-  color:white;
+  background-color: black; /* Le fond du bloc est noir*/
+  color:white; /* Tous le texte sera blanc*/
+  display:flex;  
+  flex-direction: column;
 }
 
 h1 { /* Style des gros titres*/
   color:#0099aa;
   background-color:#000;
-  border-style: solid;
+  border-style: solid;  /*On peut utiliser des attributs plus précis de border pour être plus spécifique*/
   border-color: red;
-  border-width: 3px;
+  border-width: 30px 20px 10px 5px; /*permet d'attribuer des largeurs différentes en haut,droite,bas et gauche*/
   border-radius: 20px;
 }
 h4{
-  font-size:20px;
+  font-size:20px; /*Taille de la police*/
 }
 
 h4:hover {
@@ -38,31 +40,31 @@ h4:hover {
   background-color: purple;
 }
 
-#comment {
+#general_comment {
   font-size: 5em;
   font-style: italic;
   color : yellowgreen;
-  font-family:"Lucida Console", "Courier New", monospace;
+  font-family:"Lucida Console", "Courier New", monospace; /*Choisir une police spécifique, il est possible d'en importer une*/
 }
-.menu ul {
-  list-style-type:none;
-  text-align: left;
+#text_general_comment{
+  display:none;  /*Indique que ce bloc n'est rien, donc pas affiché*/
+  font-size:16px;
+  font-style:normal;
+  color:black;
 }
-.menu ul li{
-  margin-bottom: 1em;
+#general_comment:hover #text_general_comment { /*Quand on survol general_comment alors l'effet sur text_general_comment est ...*/
+  display:block; /*On indique que cet élément est de type bloc et va donc être affiché*/
+}
+.menu input {
+  margin-bottom: 1em; /*Le bloc d'en dessous sera espacé de 1em*/
   padding-top: 1em;
   padding-bottom: 1em;
-}
-.menu ul li:hover{
-  background-color: grey;
-}
-.menu ul li input {
-  background-color: rgba(0, 0, 0, 0); /* Green */
-  border: none;
+  background-color: rgba(0, 0, 0, 0); /* Transparent */
+  border: none;  /*Pour préciser qu'on ne veut pas de bord (utile quand il y en a par défaut)*/
   color: white;
-  text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 14px;
-  font-style: inherit;
+}
+.menu input:hover{ /*Quand on survole l'élément*/
+  background-color: grey;
 }
