@@ -8,3 +8,20 @@
   display:flex; /*Normalement le html met les blocs en colonne, cette commande permet d'être plus flexible dessus*/
   flex-direction: row-reverse;  /* Les enfants de App seront placés horizonalement dans l'ordre inverse de l'appartion dans le code*/
 }
+h1 { /* Style des gros titres*/
+  color:#0099aa;
+  background-color:#000;
+  border-style: solid;  /*On peut utiliser des attributs plus précis de border pour être plus spécifique*/
+  border-color: red;
+  border-width: 30px 20px 10px 5px; /*permet d'attribuer des largeurs différentes en haut,droite,bas et gauche*/
+  border-radius: 20px;
+}
+h4{
+  font-size:20px; /*Taille de la police*/
+}
+
+h4:hover {
+  font-size : 30px;
+  color:#F5B;
+  background-color: purple;
+}

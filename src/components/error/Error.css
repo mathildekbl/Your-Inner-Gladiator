@@ -1,0 +1,4 @@
+.error{
+    width:80%;  /* Le bloc prend 80% de la largeur disponible */
+    border:2px solid orange;
+  }

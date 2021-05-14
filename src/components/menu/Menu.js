@@ -1,24 +1,10 @@
 import React from "react";
 import './Menu.css';
+import Pages from "../../utils/pages"
 
 export default class Menu extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            current_page:this.props.current_page
-        };
-    }
-    static pages = {
-      "home" : "Accueil",
-      "last_session" : "Ma dernière séance",
-      "accomplishment" : "Mes accomplissements",
-      "progress" : "Mes progrès",
-      "profile" : "Profil"
-    }
-
     go_to=(page)=>{ //Change the value of the current page
-      if (page in Menu.pages){
-        this.setState({current_page:page});
+      if (page in Pages.pages){
         this.props.onChangeCurrentPage(page);
         console.log("Change to "+page+" done")
       }
