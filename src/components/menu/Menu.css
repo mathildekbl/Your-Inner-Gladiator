@@ -1,0 +1,25 @@
+.Menu{
+    width:20%;
+    border:blue solid;
+    border-width: 5px;
+    background-color: black; /* Le fond du bloc est noir*/
+    color:white; /* Tous le texte sera blanc*/
+    display:flex;  
+    flex-direction: column;
+  }
+.Menu button{
+    margin-bottom: 1em; /*Le bloc d'en dessous sera espacé de 1em*/
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: rgba(0, 0, 0, 0); /* Transparent */
+    border: none;  /*Pour préciser qu'on ne veut pas de bord (utile quand il y en a par défaut)*/
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  .Menu button:hover{ /*Quand on survole l'élément*/
+    background-color: grey;
+  }
+  .Menu button:active{ /*Quand on survole l'élément*/
+    color:black;
+  }

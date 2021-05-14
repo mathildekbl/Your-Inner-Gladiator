@@ -1,0 +1,40 @@
+import React from "react";
+import './Menu.css';
+
+export default class Menu extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            current_page:this.props.current_page
+        };
+    }
+    static pages = {
+      "home" : "Accueil",
+      "last_session" : "Ma dernière séance",
+      "accomplishment" : "Mes accomplissements",
+      "progress" : "Mes progrès",
+      "profile" : "Profil"
+    }
+
+    go_to=(page)=>{ //Change the value of the current page
+      if (page in Menu.pages){
+        this.setState({current_page:page});
+        this.props.onChangeCurrentPage(page);
+        console.log("Change to "+page+" done")
+      }
+      else {
+        console.log("The page"+page+"doesn't exist");
+      }
+    }
+    render(){
+        return (
+            <div className="Menu">
+                <button id="home_button" onClick={()=>this.go_to("home")}>Accueil</button>
+                <button id="last_session_button" onClick={()=>this.go_to("last_session")}>Ma dernière séance</button>
+                <button id="accomplishment_button" onClick={()=>this.go_to("accomplishment")}>Mes accomplissements</button>
+                <button id="progress_button" onClick={()=>this.go_to("progress")}>Mes progrès</button>
+                <button id="profile_button" onClick={()=>this.go_to("profile")}>Profil</button>
+            </div>
+        );
+    }
+}
