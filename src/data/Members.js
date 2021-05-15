@@ -20,6 +20,7 @@ export default class Members{
         }
     }
     static getMemberData(id,key){
+        id = id.toString();
         try {
             return Members.member[id][key];
         } catch (e) {
@@ -27,6 +28,7 @@ export default class Members{
         }
     }
     static getMember(id){
+        id = id.toString();
         try {
             return Members.member[id];
         } catch (e) {

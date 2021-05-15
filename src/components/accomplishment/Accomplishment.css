@@ -2,3 +2,35 @@
     width:80%;
     border:2px solid orange;
 }
+.show_accomplishment ul {
+    list-style-type: none;
+    margin-right: 5%;
+}
+.show_accomplishment ul > :nth-child(2n){  /*Les enfants directs de ul ne numéro pair*/
+    background-color:rgb(50, 200, 150);
+}
+.show_accomplishment ul > :nth-child(2n+1){  /*Les enfants directs de ul ne numéro pair*/
+    background-color:rgb(120, 230, 200);
+}
+.show_accomplishment ul li {
+    margin-left:auto;
+    margin-right:auto;
+    padding: 2% 1% 2% 1%;
+} 
+.show_accomplishment ul li span {
+    display:inline-block;
+    width:50%;
+    margin-left: auto;
+    margin-right:auto;
+    text-align: left;
+}
+.show_accomplishment ul li .resultsLabel{
+    font-weight: bolder;
+}
+.resultsBlock{
+    border:2px dashed purple;
+}
+.activityTitle {
+    font-size: 30px;
+    font-weight: bolder;
+}

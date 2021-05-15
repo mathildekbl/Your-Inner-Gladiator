@@ -6,7 +6,7 @@ import Progression from "./progression/Progression"
 import Profile from "./profile/Profile"
 import Error from "./error/Error"
 
-export default class Conent extends React.Component{
+export default class Content extends React.Component{
     render(){
         switch(this.props.current_page){
             case 'home':

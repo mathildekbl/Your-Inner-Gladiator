@@ -6,7 +6,6 @@ export default class Menu extends React.Component{
     go_to=(page)=>{ //Change the value of the current page
       if (page in Pages.pages){
         this.props.onChangeCurrentPage(page);
-        console.log("Change to "+page+" done")
       }
       else {
         console.log("The page"+page+"doesn't exist");
