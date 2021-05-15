@@ -1,11 +1,12 @@
 import React from "react";
 import './Home.css';
+import Members from "../../data/Members";
 
 export default class Home extends React.Component{
     render(){
         return (
             <div className="home">
-                <h1>Bienvenue {this.props.who} !</h1>
+                <h1>Bienvenue {Members.getMemberData(this.props.who,"firstName")} !</h1>
                 <h4> Voici ton évolution</h4>
                 <img src="img\strong.png" alt="muscle" className="evolution"/>
                 <div className="general_comment">

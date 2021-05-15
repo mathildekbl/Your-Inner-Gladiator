@@ -1,0 +1,28 @@
+.profile{
+    width:100%;
+    border:2px solid orange;
+}
+.profile ul {
+    list-style-type: none;
+    border:1px green solid;
+}
+.profile ul > :nth-child(2n){  /*Les enfants directs de ul ne numéro pair*/
+    background-color:rgb(50, 200, 150);
+}
+.profile ul > :nth-child(2n+1){  /*Les enfants directs de ul ne numéro pair*/
+    background-color:rgb(120, 230, 200);
+}
+.profile ul li {
+    margin-left:auto;
+    margin-right:auto;
+} 
+.profile ul li span {
+    display:inline-block;
+    width:50%;
+    margin-left: auto;
+    margin-right:auto;
+    text-align: left;
+}
+.profile ul li .profileLabel{
+    font-weight: bolder;
+}

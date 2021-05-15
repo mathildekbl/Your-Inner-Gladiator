@@ -9,7 +9,7 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       current_page:'home',
-      who:''
+      who:1
     };
   }
   update_current_page=(page)=>{

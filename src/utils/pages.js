@@ -3,7 +3,7 @@ export default class Pages {
         "home" : "Accueil",
         "last_session" : "Ma dernière séance",
         "accomplishment" : "Mes accomplissements",
-        "progress" : "Mes progrès",
+        "progression" : "Mes progrès",
         "profile" : "Profil"
       }
 }
