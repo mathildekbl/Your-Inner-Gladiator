@@ -1,0 +1,58 @@
+.header {
+    margin-left: 18%;
+    margin-right: auto;
+    width:80%;
+    margin-bottom: 25px;
+}
+.header h1 {
+    width:50%;
+}
+.headerText{
+    font-size:15px;
+    font-weight: bold;
+    text-align: left;
+}
+.mainContent {
+    margin-left: 18%;
+    width:50%;
+}
+.mainContent > * {
+    background-color: rgba(80, 120, 120, 0.4);
+    padding: 5px;
+    border-radius: 10px;
+}
+h2 {  
+    font-size:30px;
+    margin-top: 0px;
+}
+.mainContent .fancyList {
+    list-style-type: none;
+    margin-right:5%;
+}
+.mainContent .fancyList > :nth-child(2n){  /*Les enfants directs de ul ne numéro pair*/
+    background-color:rgb(50, 200, 150);  
+}
+.mainContent .fancyList > :nth-child(2n+1){  /*Les enfants directs de ul ne numéro pair*/
+    background-color:rgb(120, 230, 200);
+}
+.mainContent .fancyList li {
+    margin-left:auto;
+    margin-right:auto;
+    padding: 15px 10px 15px 15px;
+} 
+.mainContent .fancyList li:hover {
+    font-size:25px;
+} 
+.mainContent .fancyList li span {
+    display:inline-block;
+    text-align: left;
+}
+.mainContent .fancyList li .label{
+    font-weight: bolder;
+    width:70%;
+}
+.mainContent .fancyList li .value{
+    width:30%;
+    margin-bottom: auto;
+    margin-top: auto;
+}

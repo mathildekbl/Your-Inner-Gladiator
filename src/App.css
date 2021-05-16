@@ -1,29 +1,14 @@
-.App {
-  text-align: center;
+.main {
+  background-image: url("img/VELO.jpg");
+  text-align: center; /* Le texte est centré*/
+  display:flex; /*Normalement le html met les blocs en colonne, cette commande permet d'être plus flexible dessus*/
+  flex-direction: row-reverse;  /* Les enfants de App seront placés horizonalement dans l'ordre inverse de l'appartion dans le code*/
+  min-height: 700px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 { /* Style des gros titres*/
+  color:black;
+  font-size: 60px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+.content {
+    width:100%;
 }
