@@ -17,7 +17,7 @@
     width:50%;
 }
 .mainContent > * {
-    background-color: rgba(80, 120, 120, 0.4);
+    background-color: rgba(80, 120, 120, 0.35);
     padding: 5px;
     border-radius: 10px;
 }
