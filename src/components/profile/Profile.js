@@ -5,6 +5,10 @@ import Dict from "../../utils/Dictionnary";
 
 export default class Profile extends React.Component{
     generateProfile(memberData){
+        /*
+        Prevoir si sessions est vide, deux cas :
+            -> Le membre n'est pas identifié   -> Mettre un message "On ne vous reconnaît pas ..."
+        */
         var x;
         var listElements = [];
         for (x in memberData){

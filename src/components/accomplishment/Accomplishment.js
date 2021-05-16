@@ -5,9 +5,15 @@ import Members from "../../data/Members";
 import Bike from "../../data/Bike";
 
 import Dict from "../../utils/Dictionnary";
+import Converter from "../../utils/Converter";
 
 export default class Accomplishment extends React.Component{
     getBikeStats(sessions){
+        /*
+        Prevoir si sessions est vide, deux cas :
+            -> Le membre n'est pas identifié   -> Mettre un message "On ne vous reconnaît pas ..."
+            -> Le membre n'a pas fait de session vélo -> "Encourager à commencer les séances vélo"
+        */
         var stats={
             "totalLength":0,
             "totalTime":0
@@ -20,9 +26,9 @@ export default class Accomplishment extends React.Component{
         
         /*Generer code HTML */
         var listElements = [];
-        for (var x2 in stats){
-            listElements.push(<li key={x2}><span className="label">{Dict.dict[x2]}</span><span className="value">{stats[x2]}</span></li>);
-        }
+        listElements.push(<li key="totalLength"><span className="label">{Dict.dict["totalLength"]}</span><span className="value">{Converter.distanceFormat(stats["totalLength"])}</span></li>);
+        listElements.push(<li key="totalTime"><span className="label">{Dict.dict["totalTime"]}</span><span className="value">{Converter.timeFormat(stats["totalTime"])}</span></li>);
+
         return(<ul className="fancyList">{listElements}</ul>);
     }
     render(){
