@@ -1,6 +1,3 @@
-.content {
-    width:100%;
-}
 .header {
     margin-left: 18%;
     margin-right: auto;
@@ -28,33 +25,34 @@ h2 {
     font-size:30px;
     margin-top: 0px;
 }
-.mainContent ul {
+.mainContent .fancyList {
     list-style-type: none;
     margin-right:5%;
 }
-.mainContent ul > :nth-child(2n){  /*Les enfants directs de ul ne numéro pair*/
+.mainContent .fancyList > :nth-child(2n){  /*Les enfants directs de ul ne numéro pair*/
     background-color:rgb(50, 200, 150);  
 }
-.mainContent ul > :nth-child(2n+1){  /*Les enfants directs de ul ne numéro pair*/
+.mainContent .fancyList > :nth-child(2n+1){  /*Les enfants directs de ul ne numéro pair*/
     background-color:rgb(120, 230, 200);
 }
-.mainContent ul li {
+.mainContent .fancyList li {
     margin-left:auto;
     margin-right:auto;
     padding: 15px 10px 15px 15px;
 } 
-.mainContent ul li:hover {
+.mainContent .fancyList li:hover {
     font-size:25px;
 } 
-.mainContent ul li span {
+.mainContent .fancyList li span {
     display:inline-block;
-    width:50%;
     text-align: left;
 }
-.mainContent ul li .label{
+.mainContent .fancyList li .label{
     font-weight: bolder;
+    width:70%;
 }
-.mainContent ul li .value{
+.mainContent .fancyList li .value{
+    width:30%;
     margin-bottom: auto;
     margin-top: auto;
 }

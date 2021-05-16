@@ -10,7 +10,7 @@ export default class Profile extends React.Component{
         for (x in memberData){
             listElements.push(<li key={x}><span className="label">{Dict.dict[x]}</span><span className="value">{memberData[x]}</span></li>);
         }
-        return(<ul>{listElements}</ul>);
+        return(<ul className="fancyList">{listElements}</ul>);
         
     }
     render(){ 

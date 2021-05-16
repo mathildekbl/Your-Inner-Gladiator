@@ -13,7 +13,12 @@ export default class Home extends React.Component{
                     <div className="welcome">
                         <h2>Keep In Shape</h2>
                         <div className="welcomeText">
-                            Nous faisons tout pour vous maintenir au top !
+                            Nous faisons tout pour vous maintenir au top ! 
+                            Pour cela nous utilisons nos objets intelligents : <br/>
+                            <ul>
+                                <li>Une balance pour suivre votre poids</li>
+                                <li>Nos vélos pour avoir pleins de stats</li>
+                            </ul>
                         </div>
                     </div>
                 </div>

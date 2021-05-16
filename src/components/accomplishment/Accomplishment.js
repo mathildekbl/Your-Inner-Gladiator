@@ -23,7 +23,7 @@ export default class Accomplishment extends React.Component{
         for (var x2 in stats){
             listElements.push(<li key={x2}><span className="label">{Dict.dict[x2]}</span><span className="value">{stats[x2]}</span></li>);
         }
-        return(<ul>{listElements}</ul>);
+        return(<ul className="fancyList">{listElements}</ul>);
     }
     render(){
         return (

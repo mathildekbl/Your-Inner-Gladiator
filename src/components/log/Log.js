@@ -18,10 +18,10 @@ export default class Log extends React.Component{
         var listElements = [];
         for (x in Members.member){
             if (x===this.props.who){
-                listElements.push(<option key={"member"+x} value={x} selected>{Members.getMemberData(x,"firstName")}</option>);
+                listElements.push(<option key={"member"+x} value={x} selected>{Members.getMemberData(x,"firstName")+"  "+Members.getMemberData(x,"lastName")}</option>);
             }
             else {
-                listElements.push(<option key={"member"+x} value={x}>{Members.getMemberData(x,"firstName")}</option>);
+                listElements.push(<option key={"member"+x} value={x}>{Members.getMemberData(x,"firstName")+"  "+Members.getMemberData(x,"lastName")}</option>);
             }   
         }
         return(<select value={this.state.value} onChange={this.handleChange} name="members">{listElements}</select>);

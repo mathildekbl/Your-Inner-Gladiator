@@ -3,9 +3,12 @@
   text-align: center; /* Le texte est centré*/
   display:flex; /*Normalement le html met les blocs en colonne, cette commande permet d'être plus flexible dessus*/
   flex-direction: row-reverse;  /* Les enfants de App seront placés horizonalement dans l'ordre inverse de l'appartion dans le code*/
-  height: 700px;
+  min-height: 700px;
 }
 h1 { /* Style des gros titres*/
   color:black;
   font-size: 60px;
+}
+.content {
+    width:100%;
 }

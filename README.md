@@ -1,3 +1,27 @@
+# Structure de la page
+
+- App contient toute la page
+
+    - main -> tout sauf le formulaire de connexion
+
+            - menu -> la barre latérale pour naviguer sur le site
+
+            - content -> tout le contenu
+
+                - header -> L'entête du contenu (titre et texte d'intro)
+
+                    headerText -> Le texte sous le titre
+
+                - mainContent -> Les textes, tableaux, articles, images, bref les infos
+
+    - footer -> le formulaire de connexion
+
+## Autres classes
+
+- fancyList : Sort une liste sous forme de tableau
+
+- welcome : Le bloc de présentation du site
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
