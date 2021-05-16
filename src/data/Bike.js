@@ -1,6 +1,6 @@
 export default class Bike{
     static bike = {
-        1:{
+        '1':{
             "memberId":2,
             "duration":2700,
             "distance":20.2,
@@ -8,7 +8,7 @@ export default class Bike{
             "maxBPM":182,
             "kcal":1875
         },
-        2:{
+        '2':{
             "memberId":1,
             "duration":3600,
             "distance":26.4,
@@ -16,7 +16,7 @@ export default class Bike{
             "maxBPM":195,
             "kcal":2450
         },
-        3:{
+        '3':{
             "memberId":2,
             "duration":2815,
             "distance":22.1,
@@ -28,16 +28,7 @@ export default class Bike{
     static getMemberSessions(memberId){
         var answer = {};
         for (var x in Bike.bike){
-            if(Bike.bike[x]["memberId"].toString()===memberId.toString()){ /* Vérifier si memberId est bien présent */
-                answer[x]=Bike.bike[x];
-            }
-        }
-        return answer;
-    }
-    static getLastSession(memberId){  /*A faire*/
-        var answer = {};
-        for (var x in Bike.bike){
-            if(Bike.bike[x]["memberId"].toString()===memberId.toString()){ /* Vérifier si memberId est bien présent */
+            if(Bike.bike[x]["memberId"]===memberId){ /* Vérifier si memberId est bien présent */
                 answer[x]=Bike.bike[x];
             }
         }

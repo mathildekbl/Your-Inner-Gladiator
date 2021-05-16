@@ -1,6 +1,6 @@
 export default class Members{
     static member = {
-        1 : {
+        '1' : {
             "firstName":"Jean",
             "lastName":"Dupond",
             "age":25,
@@ -9,7 +9,7 @@ export default class Members{
             "targetWeight":70,
             "height":175
         },
-        2:{
+        '2' :{
             "firstName":"Marie",
             "lastName":"Martin",
             "age":23,
@@ -20,7 +20,6 @@ export default class Members{
         }
     }
     static getMemberData(id,key){
-        id = id.toString();
         try {
             return Members.member[id][key];
         } catch (e) {
@@ -28,7 +27,6 @@ export default class Members{
         }
     }
     static getMember(id){
-        id = id.toString();
         try {
             return Members.member[id];
         } catch (e) {
