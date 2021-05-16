@@ -21,18 +21,22 @@ export default class Accomplishment extends React.Component{
         /*Generer code HTML */
         var listElements = [];
         for (var x2 in stats){
-            listElements.push(<li key={x2}><span className="resultsLabel">{Dict.dict[x2]}</span><span className="resultsValue">{stats[x2]}</span></li>);
+            listElements.push(<li key={x2}><span className="label">{Dict.dict[x2]}</span><span className="value">{stats[x2]}</span></li>);
         }
         return(<ul>{listElements}</ul>);
     }
     render(){
         return (
-            <div className="accomplishment">
-                <h1>Vos exploits !</h1>
-                <h4>{Members.getMemberData(this.props.who,"firstName")} voici vos incroyables perfs !</h4>
-                <div className="show_accomplishment">
+            <div className="content">
+                <div className="header">
+                    <h1>Vos exploits !</h1>
+                    <div className="headerText">
+                        {Members.getMemberData(this.props.who,"firstName")} voici vos incroyables perfs !
+                    </div>
+                </div>
+                <div className="mainContent">
                     <div className="resultsBlock">
-                        <div className="activityTitle">Vélo</div>
+                        <h2>Vélo</h2>
                         <div className="numberOfSessions">
                             Nombre de séance {Bike.getNumberOfSessions(this.props.who)}
                         </div>

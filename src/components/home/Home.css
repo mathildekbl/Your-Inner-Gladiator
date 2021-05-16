@@ -1,4 +1,6 @@
-.home{
-    width:80%;  /* Le bloc prend 80% de la largeur disponible */
-  } 
-  
+.welcomeText {
+    color:white;
+    font-family: "Comic Sans MS";
+    font-size: 25px;
+    text-align: left;
+}

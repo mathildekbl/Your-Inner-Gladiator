@@ -1,0 +1,60 @@
+.content {
+    width:100%;
+}
+.header {
+    margin-left: 18%;
+    margin-right: auto;
+    width:80%;
+    margin-bottom: 25px;
+}
+.header h1 {
+    width:50%;
+}
+.headerText{
+    font-size:15px;
+    font-weight: bold;
+    text-align: left;
+}
+.mainContent {
+    margin-left: 18%;
+    width:50%;
+}
+.mainContent > * {
+    background-color: rgba(80, 120, 120, 0.4);
+    padding: 5px;
+    border-radius: 10px;
+}
+h2 {  
+    font-size:30px;
+    margin-top: 0px;
+}
+.mainContent ul {
+    list-style-type: none;
+    margin-right:5%;
+}
+.mainContent ul > :nth-child(2n){  /*Les enfants directs de ul ne numéro pair*/
+    background-color:rgb(50, 200, 150);  
+}
+.mainContent ul > :nth-child(2n+1){  /*Les enfants directs de ul ne numéro pair*/
+    background-color:rgb(120, 230, 200);
+}
+.mainContent ul li {
+    margin-left:auto;
+    margin-right:auto;
+    padding: 15px 10px 15px 15px;
+} 
+.mainContent ul li:hover {
+    font-size:25px;
+} 
+.mainContent ul li span {
+    display:inline-block;
+    width:50%;
+    text-align: left;
+}
+.mainContent ul li .label{
+    font-weight: bolder;
+}
+.mainContent ul li .value{
+    margin-bottom: auto;
+    margin-top: auto;
+}

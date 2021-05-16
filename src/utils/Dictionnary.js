@@ -12,7 +12,7 @@ export default class Dict{
         "averageBPM":"Fréquence Cardiaque Moyenne",
         "maxBPM":"Fréquence Cardiaque Maximale",
         "kcal":"Calories dépensés",
-        "totalLength":"Distance totale parcourue en km",
-        "totalTime":"Durée Totale en seconde"
+        "totalLength":"Distance totale parcourue",
+        "totalTime":"Durée Totale "
     }
 }

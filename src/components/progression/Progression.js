@@ -1,14 +1,18 @@
 import React from "react";
 import './Progression.css';
-import Members from "../../data/Members";
 
 export default class Profile extends React.Component{
     render(){
         return (
-            <div className="progression">
-                <h1>Vos progrès !</h1>
-                <div className="show_progression">
-                    Progression de {Members.getMemberData(this.props.who,"firstName")}
+            <div className="content">
+                <div className="header">
+                    <h1>Vos progrès !</h1>
+                    <div className="headerText">
+                        S'entrainer c'est bien, mais progresser c'est encore mieux
+                    </div>
+                </div>
+                <div className="mainContent">
+                    <h2>Evolution des résultats</h2>
                 </div>
             </div>
         );

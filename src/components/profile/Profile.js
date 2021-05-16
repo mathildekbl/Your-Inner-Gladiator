@@ -8,16 +8,23 @@ export default class Profile extends React.Component{
         var x;
         var listElements = [];
         for (x in memberData){
-            listElements.push(<li key={x}><span className="profileLabel">{Dict.dict[x]}</span><span className="profileValue">{memberData[x]}</span></li>);
+            listElements.push(<li key={x}><span className="label">{Dict.dict[x]}</span><span className="value">{memberData[x]}</span></li>);
         }
         return(<ul>{listElements}</ul>);
         
     }
     render(){ 
         return (
-            <div className="profile">
-                <h1>Votre Profil !</h1>
-                {this.generateProfile(Members.getMember(this.props.who))}
+            <div className="content">
+                <div className="header">
+                    <h1>Votre Profil !</h1>
+                </div>
+                <div className="mainContent">
+                    <div className="profile">
+                        <h2>Profil</h2>
+                        {this.generateProfile(Members.getMember(this.props.who))}
+                    </div>
+                </div>
             </div>
         );
     }
