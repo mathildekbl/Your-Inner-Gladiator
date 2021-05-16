@@ -12,10 +12,13 @@ export default class Accomplishment extends React.Component{
             "totalLength":0,
             "totalTime":0
         }
+        /* Calcul des totaux*/
         for (var x1 in sessions){
             stats["totalLength"] += sessions[x1]["distance"];
             stats["totalTime"] += sessions[x1]["duration"];
         }
+        
+        /*Generer code HTML */
         var listElements = [];
         for (var x2 in stats){
             listElements.push(<li key={x2}><span className="resultsLabel">{Dict.dict[x2]}</span><span className="resultsValue">{stats[x2]}</span></li>);
@@ -30,6 +33,9 @@ export default class Accomplishment extends React.Component{
                 <div className="show_accomplishment">
                     <div className="resultsBlock">
                         <div className="activityTitle">Vélo</div>
+                        <div className="numberOfSessions">
+                            Nombre de séance {Bike.getNumberOfSessions(this.props.who)}
+                        </div>
                         {this.getBikeStats(Bike.getMemberSessions(this.props.who))}
                     </div>
                 </div>

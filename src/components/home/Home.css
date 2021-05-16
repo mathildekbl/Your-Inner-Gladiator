@@ -1,20 +1,4 @@
 .home{
     width:80%;  /* Le bloc prend 80% de la largeur disponible */
-    border:2px solid orange;
   } 
-  .general_comment {
-    font-size: 5em;
-    font-style: italic;
-    color : yellowgreen;
-    font-family:"Lucida Console", "Courier New", monospace; /*Choisir une police spécifique, il est possible d'en importer une*/
-  }
-  .text_general_comment{
-    display:none;  /*Indique que ce bloc n'est rien, donc pas affiché*/
-    font-size:16px;
-    font-style:normal;
-    color:black;
-  }
-  .general_comment:hover #text_general_comment { /*Quand on survol general_comment alors l'effet sur text_general_comment est ...*/
-    display:block; /*On indique que cet élément est de type bloc et va donc être affiché*/
-  }
   

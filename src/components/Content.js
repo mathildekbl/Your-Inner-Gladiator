@@ -6,6 +6,8 @@ import Progression from "./progression/Progression"
 import Profile from "./profile/Profile"
 import Error from "./error/Error"
 
+import './Content.css';
+
 export default class Content extends React.Component{
     render(){
         switch(this.props.current_page){

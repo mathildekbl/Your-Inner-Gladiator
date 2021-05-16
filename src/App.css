@@ -1,20 +1,17 @@
 .main {
+  background-image: url("img/VELO.jpg");
   text-align: center; /* Le texte est centré*/
-  border : solid pink; /* Le bord est plein et rose  ....*/
-  border-width: 20px; /* et fait 20px de large */
-  border-radius: 5px; /* Permet d'arrondir les angles, plus c'est grand plus c'est arrondi */
-  padding : 2%; /* Marge interne, le contenu ne peut pas s'approcher à moins de 2% de la taille du bloc du bord*/
-  padding-top : 2px; /* La marge interne supérieure ne fait que 2px*/
   display:flex; /*Normalement le html met les blocs en colonne, cette commande permet d'être plus flexible dessus*/
   flex-direction: row-reverse;  /* Les enfants de App seront placés horizonalement dans l'ordre inverse de l'appartion dans le code*/
+  height: 700px;
 }
 h1 { /* Style des gros titres*/
-  color:#0099aa;
-  background-color:#000;
-  border-style: solid;  /*On peut utiliser des attributs plus précis de border pour être plus spécifique*/
-  border-color: red;
-  border-width: 30px 20px 10px 5px; /*permet d'attribuer des largeurs différentes en haut,droite,bas et gauche*/
-  border-radius: 20px;
+  color:black;
+  width:50%;
+  font-size: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 40%;
 }
 h4{
   font-size:20px; /*Taille de la police*/

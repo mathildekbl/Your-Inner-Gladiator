@@ -1,6 +1,6 @@
 .accomplishment{
-    width:80%;
-    border:2px solid orange;
+    width:40%;
+    margin-right:auto;
 }
 .show_accomplishment ul {
     list-style-type: none;
