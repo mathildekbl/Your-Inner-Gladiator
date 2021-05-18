@@ -20,6 +20,10 @@ export default class Converter{
     static BPMformat(bpm){
         return Math.floor(bpm)+" BPM";
     }
+    static dateFormat(date){
+        var datetime = new Date(date);
+        return datetime.toLocaleString('fr-Fr',{minimumIntegerDigits:2});
+    }
     static format(label,value){
         if (['totalLength','distance'].indexOf(label)!==-1){return Converter.distanceFormat(value);}
         if (['totalTime','duration'].indexOf(label)!==-1){return Converter.timeFormat(value);}
@@ -27,6 +31,7 @@ export default class Converter{
         if (['averageBPM','maxBPM'].indexOf(label)!==-1){return Converter.BPMformat(value);}
         if (['height'].indexOf(label)!==-1){return Converter.heightFormat(value);}
         if (['currentWeight','targetWeight'].indexOf(label)!==-1){return Converter.weightFormat(value);}
+        if (['date'].indexOf(label)!==-1){return Converter.dateFormat(value);}
         return value;
     }
 }

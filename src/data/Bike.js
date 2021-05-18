@@ -2,7 +2,7 @@ export default class Bike{
     static bike = {
         '1':{
             "memberId":'2',
-            /*Date*/
+            "date":'May 14, 2021 15:15:00',
             "duration":2700,
             "distance":20.2,
             "averageBPM":128,
@@ -11,7 +11,7 @@ export default class Bike{
         },
         '2':{
             "memberId":'1',
-            /*Date*/
+            "date":'May 15, 2021 17:16:02',
             "duration":3600,
             "distance":26.4,
             "averageBPM":146,
@@ -20,7 +20,7 @@ export default class Bike{
         },
         '3':{
             "memberId":'2',
-            /*Date*/
+            "date":'May 17, 2021 08:08:29',
             "duration":2815,
             "distance":22.1,
             "averageBPM":152,
@@ -29,7 +29,7 @@ export default class Bike{
         },
         '4':{
             "memberId":'3',
-            /*Date*/
+            "date":'January 1, 1979 12:00:00',
             "duration":15994080,
             "distance":24539,
             "averageBPM":125,
@@ -66,5 +66,17 @@ export default class Bike{
         }
         stats['averageBPM']=Math.floor(60*totalHeartbeat/stats["totalTime"]);
         return stats;
+    }
+    static getLastSession(memberId){
+        var mostRecent = 'January 1, 1970 00:00:00';
+        var session={};
+        for (var x in Bike.bike){
+            if(Bike.bike[x]["memberId"]===memberId && Date.parse(Bike.bike[x]["date"]) > Date.parse(mostRecent)){ /* Vérifier si memberId est bien présent */
+                mostRecent=Bike.bike[x]["date"];
+                session=Bike.bike[x];
+                
+            }
+        }
+        return session;
     }
 }
