@@ -17,6 +17,15 @@ export default class Members{
             "currentWeight":60,
             "targetWeight":57,
             "height":168
+        },
+        '3':{
+            "firstName":"Forrest",
+            "lastName":"Gump",
+            "age":36,
+            "gender":"M",
+            "currentWeight":78,
+            "targetWeight":75,
+            "height":183
         }
     }
     static getMemberData(id,key){

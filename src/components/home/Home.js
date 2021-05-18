@@ -20,7 +20,7 @@ export default class Home extends React.Component{
                                 <li>Nos vélos pour avoir pleins de stats</li>
                             </ul>
                         </div>
-                        <img src="../../img/drole.gif" alt="img"/>
+                        <img src="./../../img/VELO.jpg" alt="img"/>
                     </div>
                 </div>
             </div>

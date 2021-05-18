@@ -26,6 +26,15 @@ export default class Bike{
             "averageBPM":152,
             "maxBPM":194,
             "kcal":2561
+        },
+        '4':{
+            "memberId":'3',
+            /*Date*/
+            "duration":15994080,
+            "distance":24539,
+            "averageBPM":125,
+            "maxBPM":172,
+            "kcal":1000000
         }
     }
     static getMemberSessions(memberId){
@@ -37,13 +46,25 @@ export default class Bike{
         }
         return answer;
     }
-    static getNumberOfSessions(memberId){
-        var n=0;
+    static getTotalStats(memberId){
+        var stats={
+            "nbSessions":0,
+            "totalLength":0,
+            "totalTime":0,
+            "totalKcal":0,
+            "averageBPM":0
+        }
+        var totalHeartbeat=0;
         for (var x in Bike.bike){
             if(Bike.bike[x]["memberId"]===memberId){ /* Vérifier si memberId est bien présent */
-                n+=1;
+                stats["nbSessions"] += 1;
+                stats["totalLength"] += Bike.bike[x]["distance"];
+                stats["totalTime"] += Bike.bike[x]["duration"];
+                stats["totalKcal"] += Bike.bike[x]["kcal"];
+                totalHeartbeat += Math.floor(Bike.bike[x]['averageBPM']*Bike.bike[x]['duration']/60);
             }
         }
-        return n;
+        stats['averageBPM']=Math.floor(60*totalHeartbeat/stats["totalTime"]);
+        return stats;
     }
 }

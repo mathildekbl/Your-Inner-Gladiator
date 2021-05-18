@@ -13,6 +13,7 @@ export default class Dict{
         "maxBPM":"Fréquence Cardiaque Maximale",
         "kcal":"Calories dépensés",
         "totalLength":"Distance totale parcourue",
-        "totalTime":"Durée Totale "
+        "totalTime":"Durée Totale ",
+        "totalKcal":"Calories totales depensés "
     }
 }

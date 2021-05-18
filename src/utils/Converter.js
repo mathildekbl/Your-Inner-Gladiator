@@ -14,4 +14,10 @@ export default class Converter{
     static heightFormat(height){ // height in cm -> return (weight/100) m weight%100
         return Math.floor(height/100).toLocaleString()+" m "+Math.floor(height%100).toLocaleString();
     }
+    static kcalFormat(kcal){
+        return Math.floor(kcal)+" kcal";
+    }
+    static BPMformat(bpm){
+        return Math.floor(bpm)+" BPM";
+    }
 }
