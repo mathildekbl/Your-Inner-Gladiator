@@ -1,9 +1,8 @@
 .main {
-  background-image: url("img/VELO.jpg");
+  background-image: url("img/GladiatorArena.jpg");
+  background-repeat:repeat-y;
+  background-position: center;
   text-align: center; /* Le texte est centré*/
-  display:flex; /*Normalement le html met les blocs en colonne, cette commande permet d'être plus flexible dessus*/
-  flex-direction: row-reverse;  /* Les enfants de App seront placés horizonalement dans l'ordre inverse de l'appartion dans le code*/
-  min-height: 700px;
 }
 h1 { /* Style des gros titres*/
   color:black;

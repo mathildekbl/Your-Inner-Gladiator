@@ -1,5 +1,5 @@
 import React from "react";
-import './Accomplishment.css';
+import './Evolution.css';
 
 import Members from "../../data/Members";
 import Bike from "../../data/Bike";
@@ -8,7 +8,7 @@ import Facts from "../../data/Facts";
 import Dict from "../../utils/Dictionnary";
 import Converter from "../../utils/Converter";
 
-export default class Accomplishment extends React.Component{
+export default class Evolution extends React.Component{
     getBikeInfo(){
         var stats = Bike.getTotalStats(this.props.who);
         var content = [];
