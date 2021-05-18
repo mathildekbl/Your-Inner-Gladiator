@@ -1,12 +1,19 @@
+@font-face {
+  font-family: 'GreekFont';
+  src: url("fonts/GreekFont.ttf") format('truetype');
+}
+
 .main {
   background-image: url("img/GladiatorArena.jpg");
   background-repeat:repeat-y;
-  background-position: center;
+  background-position: right 50% top 0px;
+  background-attachment:fixed;
   text-align: center; /* Le texte est centré*/
 }
 h1 { /* Style des gros titres*/
   color:black;
-  font-size: 60px;
+  font-size: 40px;
+  font-family: 'GreekFont',Arial;
 }
 .content {
     width:100%;

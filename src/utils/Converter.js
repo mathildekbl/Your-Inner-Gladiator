@@ -3,10 +3,10 @@ export default class Converter{
         var h = Math.floor(time/3600).toLocaleString();
         var m = Math.floor((time%3600)/60).toLocaleString('en-US', {minimumIntegerDigits: 2});
         var s = Math.floor(time%60).toLocaleString('en-US', {minimumIntegerDigits: 2});
-        return h+':'+m+':'+s;
+        return h+' h '+m+' m '+s+' s';
     }
     static distanceFormat(dist){ //dist in km -> return dist km
-        return dist.toFixed(3).toLocaleString()+" km";
+        return dist.toFixed(2).toLocaleString()+" km";
     }
     static weightFormat(weight){ //weight in kg -> return weight kg
         return weight.toFixed(1).toLocaleString()+" kg";

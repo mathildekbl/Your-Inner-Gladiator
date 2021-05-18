@@ -11,13 +11,14 @@ export default class Home extends React.Component{
                 </div>
                 <div className="mainContent">
                     <div className="welcome">
-                        <h2>Keep In Shape</h2>
+                        <h2>Bienvenue dans l'arène</h2>
                         <div className="welcomeText">
-                            Nous faisons tout pour vous maintenir au top ! 
-                            Pour cela nous utilisons nos objets intelligents : <br/>
+                            Parce que ton plus grand ennemi c'est ta détermination !
+                            Nous allons t'aider à obtenir ton physique optimal
+                            Pour cela notre écurie dispose d'outils de pointes <br/>
                             <ul>
-                                <li>Une balance pour suivre votre poids</li>
-                                <li>Nos vélos pour avoir pleins de stats</li>
+                                <li>Une balance pour suivre ton poids</li>
+                                <li>Des vélos pour enregistrer tes épopés</li>
                             </ul>
                         </div>
                     </div>

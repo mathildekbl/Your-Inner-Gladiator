@@ -1,7 +1,6 @@
 import React from "react";
 import './Evolution.css';
 
-import Members from "../../data/Members";
 import Bike from "../../data/Bike";
 import Facts from "../../data/Facts";
 
@@ -26,16 +25,20 @@ export default class Evolution extends React.Component{
         content.push(<div className="fact">{Facts.getDistFact(stats["totalLength"])}</div>);
         return (<div className="resultsBlock"><h2>Vélo</h2>{content}</div>);
     }
+    getVisualResult(){
+        return(<div className="visualResult"><img src="/src/img/Fit.png" alt="Gladiator Pic"/></div>);
+    }
     render(){
         return (
             <div className="content">
                 <div className="header">
-                    <h1>Vos exploits !</h1>
+                    <h1>Résultats de vos héroïques séances !</h1>
                     <div className="headerText">
-                        {Members.getMemberData(this.props.who,"firstName")} voici vos incroyables perfs !
+                        Des chiffres qui font peur !
                     </div>
                 </div>
                 <div className="mainContent">
+                    {this.getVisualResult()}
                     {this.getBikeInfo()}
                 </div>
             </div>
