@@ -12,12 +12,21 @@ export default class Converter{
         return weight.toFixed(1).toLocaleString()+" kg";
     }
     static heightFormat(height){ // height in cm -> return (weight/100) m weight%100
-        return Math.floor(height/100).toLocaleString()+" m "+Math.floor(height%100).toLocaleString();
+        return Math.floor(height/100).toLocaleString()+"m"+Math.floor(height%100).toLocaleString();
     }
     static kcalFormat(kcal){
         return Math.floor(kcal)+" kcal";
     }
     static BPMformat(bpm){
         return Math.floor(bpm)+" BPM";
+    }
+    static format(label,value){
+        if (['totalLength','distance'].indexOf(label)!==-1){return Converter.distanceFormat(value);}
+        if (['totalTime','duration'].indexOf(label)!==-1){return Converter.timeFormat(value);}
+        if (['totalKcal','kcal'].indexOf(label)!==-1){return Converter.kcalFormat(value);}
+        if (['averageBPM','maxBPM'].indexOf(label)!==-1){return Converter.BPMformat(value);}
+        if (['height'].indexOf(label)!==-1){return Converter.heightFormat(value);}
+        if (['currentWeight','targetWeight'].indexOf(label)!==-1){return Converter.weightFormat(value);}
+        return value;
     }
 }

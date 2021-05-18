@@ -6,7 +6,7 @@ export default class Dict{
         "gender":"Genre",
         "currentWeight":"Poids Actuel",
         "targetWeight":"Poids Cible",
-        "height":"Taille en (cm)",
+        "height":"Taille",
         "duration":"Durée",
         "distance":"Distance parcourue",
         "averageBPM":"Fréquence Cardiaque Moyenne",

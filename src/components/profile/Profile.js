@@ -1,7 +1,10 @@
 import React from "react";
 import './Profile.css';
+
 import Members from "../../data/Members";
+
 import Dict from "../../utils/Dictionnary";
+import Converter from "../../utils/Converter";
 
 export default class Profile extends React.Component{
     generateProfile(memberData){
@@ -12,7 +15,10 @@ export default class Profile extends React.Component{
         var x;
         var listElements = [];
         for (x in memberData){
-            listElements.push(<li key={x}><span className="label">{Dict.dict[x]}</span><span className="value">{memberData[x]}</span></li>);
+            listElements.push(<li key={x}>
+                <span className="label">{Dict.dict[x]}</span>
+                <span className="value">{Converter.format(x,memberData[x])}</span>
+            </li>);
         }
         return(<ul className="fancyList">{listElements}</ul>);
         
