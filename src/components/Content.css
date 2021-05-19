@@ -12,8 +12,8 @@
 }
 .headerText{
     font-size:25px;
-    color:rgb(250,50,50);
-    background-color: rgba(220, 150, 100, 0.8);;
+    color:rgb(180,80,0);
+    background-color: rgba(220, 150, 100, 0.8);
     font-weight: bold;
     text-align: center;
     width:80%;
@@ -26,7 +26,8 @@
     width:80%;
 }
 .mainContent > * {
-    background-color: rgba(220, 150, 100, 0.6);
+    /*background-image: url("/src/img/Marble.jpg");*/
+    background-color: rgba(220, 150, 100, 0.8);
     padding: 5px;
     border-radius: 10px;
     margin-bottom:25px;
@@ -35,23 +36,23 @@ h2 {
     font-size:30px;
     margin-top: 0px;
 }
+img {
+    max-height: 200px;
+}
 .mainContent .fancyList {
     list-style-type: none;
     margin-right:5%;
 }
 .mainContent .fancyList > :nth-child(2n){  /*Les enfants directs de ul ne numéro pair*/
-    background-color:rgb(50, 200, 150);  
+    background-color:rgba(250, 100, 80,0.8);  
 }
 .mainContent .fancyList > :nth-child(2n+1){  /*Les enfants directs de ul ne numéro pair*/
-    background-color:rgb(120, 230, 200);
+    background-color:rgba(230, 180, 100,0.8);
 }
 .mainContent .fancyList li {
     margin-left:auto;
     margin-right:auto;
     padding: 15px 10px 15px 15px;
-} 
-.mainContent .fancyList li:hover {
-    font-size:25px;
 } 
 .mainContent .fancyList li span {
     display:inline-block;

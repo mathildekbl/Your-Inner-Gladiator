@@ -27,11 +27,11 @@ export default class Profile extends React.Component{
         return (
             <div className="content">
                 <div className="header">
-                    <h1>Votre Profil !</h1>
+                    <h1>Profil</h1>
                 </div>
                 <div className="mainContent">
                     <div className="profile">
-                        <h2>Profil</h2>
+                        <h2>FICHE SPORTIVE</h2>
                         {this.generateProfile(Members.getMember(this.props.who))}
                     </div>
                 </div>

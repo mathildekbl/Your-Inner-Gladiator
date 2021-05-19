@@ -5,8 +5,8 @@ export default class Members{
             "lastName":"Dupond",
             "age":25,
             "gender":"M",
-            "currentWeight":78,
-            "targetWeight":70,
+            "currentWeight":95,
+            "targetWeight":80,
             "height":175
         },
         '2' :{

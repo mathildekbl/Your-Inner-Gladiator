@@ -2,24 +2,23 @@ import React from "react";
 import './LastSession.css';
 
 import Members from "../../data/Members";
-import Bike from "../../data/Bike";
+import Running from "../../data/Running";
 import Facts from "../../data/Facts";
 
 import Converter from "../../utils/Converter";
 import Dict from "../../utils/Dictionnary";
 
 export default class LastSession extends React.Component{
-    getLastBikeSession(){
-        var session = Bike.getLastSession(this.props.who);
+    getLastRunningSession(){
+        var session = Running.getLastSession(this.props.who);
         if (Object.keys(session).length===0){
-            return (<div className="lastBikeSession">On vous attend avec impatience !</div>)
+            return (<div className="lastRunningSession">On vous attend avec impatience !</div>)
         }
         var content = [];
 
         content.push(<div className="sessionsDate">Séance du {Converter.format("date",session["date"])}</div>);
 
         var listElements = [];
-        console.log(session);
         for (var statKey in session){
             if (["nbSessions","memberId","date"].indexOf(statKey)===-1){
                 listElements.push(<li key={statKey}>
@@ -31,7 +30,7 @@ export default class LastSession extends React.Component{
         content.push(<ul className="fancyList">{listElements}</ul>);
         content.push(<div className="fact">{Facts.getDistFact(session["distance"])}</div>);
 
-        return (<div className="lastBikeSession"><h2>Vélo</h2>{content}</div>);
+        return (<div className="lastRunningSession"><h2>Course à pied</h2>{content}</div>);
     }
 
     render(){
@@ -44,7 +43,7 @@ export default class LastSession extends React.Component{
                     </div>
                 </div>
                 <div className="mainContent">
-                    {this.getLastBikeSession()}
+                    {this.getLastRunningSession()}
                 </div>
             </div>
         );

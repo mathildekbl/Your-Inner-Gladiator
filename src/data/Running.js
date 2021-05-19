@@ -1,9 +1,9 @@
-export default class Bike{
-    static bike = {
+export default class Running{
+    static data = {
         '1':{
             "memberId":'2',
             "date":'May 14, 2021 15:15:00',
-            "duration":2700,
+            "duration":4500,
             "distance":20.2,
             "averageBPM":128,
             "maxBPM":182,
@@ -13,7 +13,7 @@ export default class Bike{
             "memberId":'1',
             "date":'May 15, 2021 17:16:02',
             "duration":3600,
-            "distance":26.4,
+            "distance":16.4,
             "averageBPM":146,
             "maxBPM":195,
             "kcal":2450
@@ -21,7 +21,7 @@ export default class Bike{
         '3':{
             "memberId":'2',
             "date":'May 17, 2021 08:08:29',
-            "duration":2815,
+            "duration":4230,
             "distance":22.1,
             "averageBPM":152,
             "maxBPM":194,
@@ -39,9 +39,9 @@ export default class Bike{
     }
     static getMemberSessions(memberId){
         var answer = {};
-        for (var x in Bike.bike){
-            if(Bike.bike[x]["memberId"]===memberId){ /* Vérifier si memberId est bien présent */
-                answer[x]=Bike.bike[x];
+        for (var x in Running.data){
+            if(Running.data[x]["memberId"]===memberId){ /* Vérifier si memberId est bien présent */
+                answer[x]=Running.data[x];
             }
         }
         return answer;
@@ -55,13 +55,13 @@ export default class Bike{
             "averageBPM":0
         }
         var totalHeartbeat=0;
-        for (var x in Bike.bike){
-            if(Bike.bike[x]["memberId"]===memberId){ /* Vérifier si memberId est bien présent */
+        for (var x in Running.data){
+            if(Running.data[x]["memberId"]===memberId){ /* Vérifier si memberId est bien présent */
                 stats["nbSessions"] += 1;
-                stats["totalLength"] += Bike.bike[x]["distance"];
-                stats["totalTime"] += Bike.bike[x]["duration"];
-                stats["totalKcal"] += Bike.bike[x]["kcal"];
-                totalHeartbeat += Math.floor(Bike.bike[x]['averageBPM']*Bike.bike[x]['duration']/60);
+                stats["totalLength"] += Running.data[x]["distance"];
+                stats["totalTime"] += Running.data[x]["duration"];
+                stats["totalKcal"] += Running.data[x]["kcal"];
+                totalHeartbeat += Math.floor(Running.data[x]['averageBPM']*Running.data[x]['duration']/60);
             }
         }
         stats['averageBPM']=Math.floor(60*totalHeartbeat/stats["totalTime"]);
@@ -70,10 +70,10 @@ export default class Bike{
     static getLastSession(memberId){
         var mostRecent = 'January 1, 1970 00:00:00';
         var session={};
-        for (var x in Bike.bike){
-            if(Bike.bike[x]["memberId"]===memberId && Date.parse(Bike.bike[x]["date"]) > Date.parse(mostRecent)){ /* Vérifier si memberId est bien présent */
-                mostRecent=Bike.bike[x]["date"];
-                session=Bike.bike[x];
+        for (var x in Running.data){
+            if(Running.data[x]["memberId"]===memberId && Date.parse(Running.data[x]["date"]) > Date.parse(mostRecent)){ /* Vérifier si memberId est bien présent */
+                mostRecent=Running.data[x]["date"];
+                session=Running.data[x];
                 
             }
         }
