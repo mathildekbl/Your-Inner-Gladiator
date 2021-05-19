@@ -10,13 +10,12 @@
   background-attachment:fixed;
   text-align: center; /* Le texte est centré*/
 }
+h1,h2,h3,h4{
+  font-family: 'GreekFont';
+}
 h1 { /* Style des gros titres*/
   color:black;
   font-size: 40px;
-  font-family: 'GreekFont',Arial;
-}
-h2 {
-  font-family: 'GreekFont';
 }
 .content {
     width:100%;

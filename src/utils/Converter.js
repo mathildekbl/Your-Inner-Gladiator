@@ -5,7 +5,8 @@ export default class Converter{
         var s = Math.floor(time%60).toLocaleString('en-US', {minimumIntegerDigits: 2});
         return h+' h '+m+' m '+s+' s';
     }
-    static distanceFormat(dist){ //dist in km -> return dist km
+    static distanceFormat(dist){ 
+        if (dist<10){return (1000*dist).toLocaleString()+" m";}
         return dist.toFixed(2).toLocaleString()+" km";
     }
     static weightFormat(weight){ //weight in kg -> return weight kg
@@ -30,7 +31,7 @@ export default class Converter{
         if (['totalKcal','kcal'].indexOf(label)!==-1){return Converter.kcalFormat(value);}
         if (['averageBPM','maxBPM'].indexOf(label)!==-1){return Converter.BPMformat(value);}
         if (['height'].indexOf(label)!==-1){return Converter.heightFormat(value);}
-        if (['currentWeight','targetWeight'].indexOf(label)!==-1){return Converter.weightFormat(value);}
+        if (['currentWeight','targetWeight',"weight"].indexOf(label)!==-1){return Converter.weightFormat(value);}
         if (['date'].indexOf(label)!==-1){return Converter.dateFormat(value);}
         return value;
     }

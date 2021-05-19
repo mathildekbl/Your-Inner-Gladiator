@@ -20,7 +20,8 @@ export default class Home extends React.Component{
                             Pour cela notre écurie dispose d'outils de pointes <br/>
                             <ul>
                                 <li>Une balance pour suivre ton poids</li>
-                                <li>Des tapis de course pour enregistrer tes épopés</li>
+                                <li>Des tapis de course pour enregistrer tes épopées</li>
+                                <li>Et bien d'autres à venir ...</li>
                             </ul>
                             <img src={helmetImg} alt="logo"/><br/>
                             Ceux qui vont suer vous saluent !

@@ -23,6 +23,10 @@ export default class Facts{
         '6':{
             'value':408,
             'text':" de la distance par rapport à l'ISS. Vous vous rapprocher des ETOILES !"
+        },
+        '7':{
+            'value':0.5,
+            'text':' de la distance jusqu\'à la boîte aux lettres'
         }
 
     }

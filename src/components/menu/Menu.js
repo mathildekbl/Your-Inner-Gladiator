@@ -14,10 +14,10 @@ export default class Menu extends React.Component{
     render(){
         return (
             <div className="Menu">
-                <button id="home_button" onClick={()=>this.go_to("home")}>Accueil</button>
-                <button id="last_session_button" onClick={()=>this.go_to("last_session")}>Ma dernière séance</button>
-                <button id="progress_button" onClick={()=>this.go_to("evolution")}>Mon Evolution</button>
-                <button id="profile_button" onClick={()=>this.go_to("profile")}>Profil</button>
+                <button id="home_button" onClick={()=>this.go_to("home")}>{Pages.pages["home"]}</button>
+                <button id="last_session_button" onClick={()=>this.go_to("last_session")}>{Pages.pages["last_session"]}</button>
+                <button id="progress_button" onClick={()=>this.go_to("evolution")}>{Pages.pages["evolution"]}</button>
+                <button id="profile_button" onClick={()=>this.go_to("profile")}>{Pages.pages["profile"]}</button>
             </div>
         );
     }

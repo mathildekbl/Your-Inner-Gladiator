@@ -12,11 +12,11 @@ export default class LastSession extends React.Component{
     getLastRunningSession(){
         var session = Running.getLastSession(this.props.who);
         if (Object.keys(session).length===0){
-            return (<div className="lastRunningSession">On vous attend avec impatience !</div>)
+            return (<div className="lastRunningSession">On t'attend avec impatience !</div>)
         }
         var content = [];
 
-        content.push(<div className="sessionsDate">Séance du {Converter.format("date",session["date"])}</div>);
+        content.push(<h4>Séance du {Converter.format("date",session["date"])}</h4>);
 
         var listElements = [];
         for (var statKey in session){

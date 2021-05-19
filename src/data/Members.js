@@ -5,7 +5,6 @@ export default class Members{
             "lastName":"Dupond",
             "age":25,
             "gender":"M",
-            "currentWeight":95,
             "targetWeight":80,
             "height":175
         },
@@ -14,7 +13,6 @@ export default class Members{
             "lastName":"Martin",
             "age":23,
             "gender":"F",
-            "currentWeight":60,
             "targetWeight":57,
             "height":168
         },
@@ -23,9 +21,16 @@ export default class Members{
             "lastName":"Gump",
             "age":36,
             "gender":"M",
-            "currentWeight":78,
             "targetWeight":75,
             "height":183
+        },
+        '4':{
+            "firstName":"Usain",
+            "lastName":"Bolt",
+            "age":35,
+            "gender":"M",
+            "targetWeight":90,
+            "height":196
         }
     }
     static getMemberData(id,key){

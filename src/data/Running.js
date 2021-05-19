@@ -35,6 +35,15 @@ export default class Running{
             "averageBPM":125,
             "maxBPM":172,
             "kcal":1000000
+        },
+        '5':{
+            "memberId":'4',
+            "date":'August 16, 2009 18:00:00',
+            "duration":9.58,
+            "distance":0.1,
+            "averageBPM":160,
+            "maxBPM":180,
+            "kcal":1000
         }
     }
     static getMemberSessions(memberId){

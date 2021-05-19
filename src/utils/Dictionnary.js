@@ -11,9 +11,9 @@ export default class Dict{
         "distance":"Distance parcourue",
         "averageBPM":"Fréquence Cardiaque Moyenne",
         "maxBPM":"Fréquence Cardiaque Maximale",
-        "kcal":"Calories dépensés",
+        "kcal":"Calories dépensées",
         "totalLength":"Distance totale parcourue",
         "totalTime":"Durée Totale ",
-        "totalKcal":"Calories totales depensés "
+        "totalKcal":"Calories totales depensées "
     }
 }

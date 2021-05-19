@@ -7,7 +7,8 @@ import Dict from "../../utils/Dictionnary";
 import Converter from "../../utils/Converter";
 
 export default class Profile extends React.Component{
-    generateProfile(memberData){
+    generateProfile(){
+        var memberData = Members.getMember(this.props.who)
         /*
         Prevoir si sessions est vide, deux cas :
             -> Le membre n'est pas identifié   -> Mettre un message "On ne vous reconnaît pas ..."
@@ -32,7 +33,7 @@ export default class Profile extends React.Component{
                 <div className="mainContent">
                     <div className="profile">
                         <h2>FICHE SPORTIVE</h2>
-                        {this.generateProfile(Members.getMember(this.props.who))}
+                        {this.generateProfile()}
                     </div>
                 </div>
             </div>
