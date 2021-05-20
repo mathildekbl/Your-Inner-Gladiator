@@ -9,15 +9,15 @@ export default class Home extends React.Component{
         return (
             <div className="content">
                 <div className="header">
-                    <h1>{Members.getMemberData(this.props.who,"firstName")} fait son entrée !</h1>
+                    <h1>Your inner gladiator</h1>
                 </div>
                 <div className="mainContent">
                     <div className="welcome">
-                        <h2>Bienvenue dans l'arène</h2>
+                        <h2> Ave {Members.getMemberData(this.props.who,"firstName")}! </h2>
                         <div className="welcomeText">
-                            Parce que ton plus grand ennemi c'est ta détermination !
-                            Nous allons t'aider à obtenir ton physique optimal.
-                            Pour cela notre écurie dispose d'outils de pointes <br/>
+                            Parce que ton plus grand ennemi c'est ta détermination,
+                            nous allons t'aider à obtenir ton physique optimal!
+                            Pour cela notre écurie dispose d'outils de pointes: <br/>
                             <ul>
                                 <li>Une balance pour suivre ton poids</li>
                                 <li>Des tapis de course pour enregistrer tes épopées</li>

@@ -39,7 +39,7 @@ export default class Evolution extends React.Component{
         let text;
         let image;
         if (imc<20){
-            text="Il va falloir prendre un peu de masse pour en imposer ! Charger plus lourd la prochaine fois";
+            text="Il va falloir prendre un peu de masse pour en imposer ! Chargez plus lourd la prochaine fois";
             image=fitImg;
         }
         else if (imc<25){

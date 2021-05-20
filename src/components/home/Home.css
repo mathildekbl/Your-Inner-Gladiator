@@ -1,8 +1,9 @@
 .welcomeText {
     color:black;
-    font-family: "Arial";
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 25px;
 }
 .welcomeText ul {
     text-align: left;
 }
+
