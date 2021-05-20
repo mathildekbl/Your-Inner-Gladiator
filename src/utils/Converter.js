@@ -1,18 +1,21 @@
+// Permet de gérer l'affichage des différentes données
 export default class Converter{
-    static timeFormat(time){ // time in second -> return  hh:mm:ss
-        var h = Math.floor(time/3600).toLocaleString();
-        var m = Math.floor((time%3600)/60).toLocaleString('en-US', {minimumIntegerDigits: 2});
-        var s = Math.floor(time%60).toLocaleString('en-US', {minimumIntegerDigits: 2});
+    static timeFormat(time){ 
+        /* time est en secondes
+        return au format hh:mm:ss*/
+        let h = Math.floor(time/3600).toLocaleString();
+        let m = Math.floor((time%3600)/60).toLocaleString('en-US', {minimumIntegerDigits: 2});
+        let s = Math.floor(time%60).toLocaleString('en-US', {minimumIntegerDigits: 2});
         return h+' h '+m+' m '+s+' s';
     }
     static distanceFormat(dist){ 
         if (dist<10){return (1000*dist).toLocaleString()+" m";}
         return dist.toFixed(2).toLocaleString()+" km";
     }
-    static weightFormat(weight){ //weight in kg -> return weight kg
+    static weightFormat(weight){ 
         return weight.toFixed(1).toLocaleString()+" kg";
     }
-    static heightFormat(height){ // height in cm -> return (weight/100) m weight%100
+    static heightFormat(height){ 
         return Math.floor(height/100).toLocaleString()+"m"+Math.floor(height%100).toLocaleString();
     }
     static kcalFormat(kcal){
@@ -26,6 +29,7 @@ export default class Converter{
         return datetime.toLocaleString('fr-Fr',{minimumIntegerDigits:2});
     }
     static format(label,value){
+        // Redirige vers le bon formatage en fonction du label en argument.
         if (['totalLength','distance'].indexOf(label)!==-1){return Converter.distanceFormat(value);}
         if (['totalTime','duration'].indexOf(label)!==-1){return Converter.timeFormat(value);}
         if (['totalKcal','kcal'].indexOf(label)!==-1){return Converter.kcalFormat(value);}

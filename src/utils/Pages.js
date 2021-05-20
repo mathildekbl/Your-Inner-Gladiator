@@ -1,3 +1,4 @@
+// Attribut un nom aux pages (dans menu) en fonction du label 
 export default class Pages {
     static pages = {
         "home" : "Accueil",

@@ -1,29 +1,30 @@
-.fact {
-    text-align:left;
-    font-weight:bold;
-    font-size:20px;
-    font-family: "GreekFont";
-    text-align:center;
-}
-.numberOfSessions {
-    font-size:20px;
-    font-family: "GreekFont";
-}
-.gladanim {
-max-width: 400px;
-max-height: 400px;
-margin-bottom: 100px;
-position: relative;
-animation-name: example;
-animation-duration: 4s;
-animation-iteration-count: infinite;
-animation-delay: 2.5s;
+/* Import animation */
+@keyframes example {
+    0%   { left:-10%; top:0px;}
+    25%  {left:10%; top:0px;}
+    50%  { left:10%; top:100px;}
+    75%  { left:-10%; top:100px;}
+    100% {left:-10%; top:0px;}
 }
 
-@keyframes example {
-0%   { left:-100px; top:0px;}
-25%  {left:100px; top:0px;}
-50%  { left:100px; top:100px;}
-75%  { left:-100px; top:100px;}
-100% {left:-100px; top:0px;}
+.fact {
+    font-family: "GreekFont";
+    font-size:20px;
+    font-weight:bold;
+    margin-top:10px;
+    text-align:center;
+}
+.gladanim {
+    animation-delay: 2.5s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-name: example;
+    margin-bottom: 100px;
+    max-height: 400px;
+    max-width: 400px;
+    position: relative;
+}
+.numberOfSessions {
+    font-family: "GreekFont";
+    font-size:20px;
 }

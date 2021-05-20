@@ -3,7 +3,7 @@ import './Menu.css';
 import Pages from "../../utils/Pages"
 
 export default class Menu extends React.Component{
-    go_to=(page)=>{ //Change the value of the current page
+    go_to=(page)=>{ //Change la page active
       if (page in Pages.pages){
         this.props.onChangeCurrentPage(page);
       }

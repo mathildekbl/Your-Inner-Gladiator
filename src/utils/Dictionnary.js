@@ -1,3 +1,4 @@
+// Attribut un texte à un label
 export default class Dict{
     static dict = {
         "firstName":"Prénom",

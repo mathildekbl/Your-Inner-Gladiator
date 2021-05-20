@@ -37,15 +37,26 @@ export default class Weight{
         }
     }
     static getWeightHistory(memberId){
-        var answers = [];
+        let answers = [];
+        let memberInData;
         for (var x in Weight.data){
-            if(Weight.data[x]["memberId"]===memberId){ /* Vérifier si memberId est bien présent */
+            try {
+                memberInData = Weight.data[x]["memberId"];
+            } catch (e) {
+                throw new Error(`Can't get the weight of "${memberId}`);
+            }
+            if(memberInData===memberId){ /* Vérifier si memberId est bien présent */
                 answers.push(Weight.data[x]);
             }
         }
-        answers.sort(function(a,b){
-            return Date.parse(b["date"]) - Date.parse(a["date"]);
-        })
+        try {
+            answers.sort(function(a,b){
+                return Date.parse(b["date"]) - Date.parse(a["date"]);
+            })
+        }
+        catch (e) {
+            throw new Error("Can't access to weight history");
+        }
         return answers;
     }
     static getCurrentWeight(memberId){

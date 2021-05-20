@@ -28,11 +28,15 @@ export default class Facts{
             'value':0.5,
             'text':' de la distance jusqu\'à la boîte aux lettres'
         }
-
     }
 
     static getDistFact(dist){
-        var answer={'value':Math.max(dist,40076),'text':" du parcours du meilleur athlète au monde... VOUS !"};
+        /* Retourne le fait le supérieur le plus proche de la distance parcourue
+        On initialise avec la valeur maximale possible*/
+        let answer={
+            'value':Math.max(dist,24540),
+            'text':" du parcours du meilleur athlète au monde... VOUS !"
+        };
         for (var key in Facts.distance){
             if (Facts.distance[key]['value']>=dist && Facts.distance[key]['value']<answer['value']) {
                 answer = Facts.distance[key];

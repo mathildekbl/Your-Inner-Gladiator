@@ -47,9 +47,16 @@ export default class Running{
         }
     }
     static getMemberSessions(memberId){
-        var answer = {};
-        for (var x in Running.data){
-            if(Running.data[x]["memberId"]===memberId){ /* Vérifier si memberId est bien présent */
+        // Toutes les sessions d'un membre
+        let answer = {};
+        let memberInData;
+        for (let x in Running.data){
+            try {
+                memberInData =  Running.data[x]["memberId"];
+            } catch (e) {
+                throw new Error(`Can't get the member in session "${x}`);
+            }
+            if(memberInData===memberId){
                 answer[x]=Running.data[x];
             }
         }
@@ -63,27 +70,48 @@ export default class Running{
             "totalKcal":0,
             "averageBPM":0
         }
-        var totalHeartbeat=0;
-        for (var x in Running.data){
-            if(Running.data[x]["memberId"]===memberId){ /* Vérifier si memberId est bien présent */
+        let totalHeartbeat=0;
+        let memberInData;
+        let distance;
+        let duration;
+        let kcal;
+        let BPM;
+        for (let x in Running.data){
+            try {
+                memberInData =  Running.data[x]["memberId"];
+                distance = Running.data[x]["distance"];
+                duration = Running.data[x]["duration"];
+                kcal = Running.data[x]["kcal"];
+                BPM = Running.data[x]['averageBPM'];
+            } catch (e) {
+                throw new Error(`Can't get the session "${x}`);
+            }
+            if(memberInData===memberId){ /* Vérifier si memberId est bien présent */
                 stats["nbSessions"] += 1;
-                stats["totalLength"] += Running.data[x]["distance"];
-                stats["totalTime"] += Running.data[x]["duration"];
-                stats["totalKcal"] += Running.data[x]["kcal"];
-                totalHeartbeat += Math.floor(Running.data[x]['averageBPM']*Running.data[x]['duration']/60);
+                stats["totalLength"] += distance;
+                stats["totalTime"] += duration;
+                stats["totalKcal"] += kcal;
+                totalHeartbeat += Math.floor(BPM*duration/60);
             }
         }
         stats['averageBPM']=Math.floor(60*totalHeartbeat/stats["totalTime"]);
         return stats;
     }
     static getLastSession(memberId){
-        var mostRecent = 'January 1, 1970 00:00:00';
-        var session={};
-        for (var x in Running.data){
-            if(Running.data[x]["memberId"]===memberId && Date.parse(Running.data[x]["date"]) > Date.parse(mostRecent)){ /* Vérifier si memberId est bien présent */
-                mostRecent=Running.data[x]["date"];
+        let mostRecent = 'January 1, 1970 00:00:00';
+        let session={};
+        let memberInData;
+        let dateInData;
+        for (let x in Running.data){
+            try {
+                memberInData = Running.data[x]["memberId"];
+                dateInData = Running.data[x]["date"]
+            } catch (e) {
+                throw new Error(`Can't get the session "${x}`);
+            }
+            if(memberInData===memberId && Date.parse(dateInData) > Date.parse(mostRecent)){ /* Vérifier si memberId est bien présent */
+                mostRecent=dateInData;
                 session=Running.data[x];
-                
             }
         }
         return session;

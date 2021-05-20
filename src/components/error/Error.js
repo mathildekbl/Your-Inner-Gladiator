@@ -4,8 +4,8 @@ import "./Error.css"
 export default class Conent extends React.Component{
     render(){
         return(
-            <div className="mainContent">
-                <h1>Oops page not found</h1>
+            <div className="Error">
+                <h1>Noble gladiateur <br/> Ne t'aventure pas ici !</h1>
             </div>
         );
     }

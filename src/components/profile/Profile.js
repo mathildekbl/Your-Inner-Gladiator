@@ -8,21 +8,21 @@ import Converter from "../../utils/Converter";
 
 export default class Profile extends React.Component{
     generateProfile(){
+        // Récup des données
         var memberData = Members.getMember(this.props.who)
-        /*
-        Prevoir si sessions est vide, deux cas :
-            -> Le membre n'est pas identifié   -> Mettre un message "On ne vous reconnaît pas ..."
-        */
-        var x;
-        var listElements = [];
-        for (x in memberData){
+        // Si pas de données
+        if (Object.keys(memberData).length===0){
+            return (<div className="unknownMember">Etes-vous un vrai gladiateur ?</div>)
+        }
+        //Va contenir le HTML de la liste
+        let listElements = [];
+        for (let x in memberData){
             listElements.push(<li key={x}>
                 <span className="label">{Dict.dict[x]}</span>
                 <span className="value">{Converter.format(x,memberData[x])}</span>
             </li>);
         }
         return(<ul className="fancyList">{listElements}</ul>);
-        
     }
     render(){ 
         return (

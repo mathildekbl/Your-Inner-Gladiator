@@ -1,24 +1,29 @@
+/* Import animation*/
+@keyframes apparition {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 .header {
+    font-family: 'GreekFont';
+    margin-bottom: 25px;
     margin-left: auto;
     margin-right: auto;
     width:100%;
-    margin-bottom: 25px;
-    font-family: 'GreekFont',Arial;
 }
 .header h1 {
-    width:50%;
     margin-left: auto;
     margin-right: auto;
 }
 .headerText{
-    font-size:25px;
-    color:rgb(220,150,0);
     background-color: rgba(220, 0, 25, 0.8);
+    color:rgb(220,150,0);
+    font-size:25px;
     font-weight: bold;
-    text-align: center;
-    width:50%;
     margin-left: auto;
     margin-right:auto;
+    text-align: center;
+    width:50%;
 }
 .mainContent {
     margin-left: auto;
@@ -26,44 +31,27 @@
     width:80%;
 }
 .mainContent > * {
-    /*background-image: url("/src/img/Marble.jpg");*/
+    animation-duration: 2.5s;
+    animation-name: apparition;
     background-color: rgba(220, 150, 100, 0.8);
     border-color: rgb(220,150,0);
-    border-width: 12px;
-    border-style: ridge;
-    padding: 5px;
     border-radius: 10px;
-    margin-bottom:25px;
-}
-h2 {  
-    font-size:50px;
-    margin-top: 30px;
-}
-img {
-   
-    width: 50%;
-}
-.mainContent >* {
-    width: 70%;
+    border-style: ridge;
+    border-width: 12px;
     margin-left: auto;
     margin-right: auto;
-    animation-name: apparition;
-    animation-duration: 2.5s;
+    margin-bottom:25px;
+    padding: 5px;
+    width: 70%;
 }
-@keyframes apparition {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
-
-
 .mainContent .fancyList {
     list-style-type: none;
     margin-right:5%;
 }
-.mainContent .fancyList > :nth-child(2n){  /*Les enfants directs de ul ne numéro pair*/
+.mainContent .fancyList > :nth-child(2n){  
     background-color:rgba(250, 100, 80,0.8);  
 }
-.mainContent .fancyList > :nth-child(2n+1){  /*Les enfants directs de ul ne numéro pair*/
+.mainContent .fancyList > :nth-child(2n+1){ 
     background-color:rgba(230, 180, 100,0.8);
 }
 .mainContent .fancyList li {
@@ -80,7 +68,7 @@ img {
     width:70%;
 }
 .mainContent .fancyList li .value{
-    width:30%;
     margin-bottom: auto;
     margin-top: auto;
+    width:30%;
 }

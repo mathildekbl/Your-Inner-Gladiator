@@ -3,8 +3,11 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 30px;
 }
+.welcomeText img {
+    width: 50%;
+}
 .welcomeText ul {
+    list-style-image: url("/src/img/GladiatorHelmetMin.png");
     text-align: center;
-    list-style-type: none;
 }
 
