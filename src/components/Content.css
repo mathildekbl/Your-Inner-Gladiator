@@ -16,7 +16,7 @@
     background-color: rgba(220, 0, 25, 0.8);
     font-weight: bold;
     text-align: center;
-    width:80%;
+    width:50%;
     margin-left: auto;
     margin-right:auto;
 }
@@ -28,21 +28,33 @@
 .mainContent > * {
     /*background-image: url("/src/img/Marble.jpg");*/
     background-color: rgba(220, 150, 100, 0.8);
+    border-color: rgb(220,150,0);
+    border-width: 12px;
+    border-style: ridge;
     padding: 5px;
     border-radius: 10px;
     margin-bottom:25px;
 }
 h2 {  
-    font-size:30px;
-    margin-top: 0px;
+    font-size:50px;
+    margin-top: 30px;
 }
 img {
-    max-height: 400px;
+   
     width: 50%;
 }
-.mainContent >* {width: 70%;
+.mainContent >* {
+    width: 70%;
     margin-left: auto;
-    margin-right: auto;}
+    margin-right: auto;
+    animation-name: apparition;
+    animation-duration: 2.5s;
+}
+@keyframes apparition {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
 
 .mainContent .fancyList {
     list-style-type: none;

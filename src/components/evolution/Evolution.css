@@ -9,3 +9,21 @@
     font-size:20px;
     font-family: "GreekFont";
 }
+.gladanim {
+max-width: 400px;
+max-height: 400px;
+margin-bottom: 100px;
+position: relative;
+animation-name: example;
+animation-duration: 4s;
+animation-iteration-count: infinite;
+animation-delay: 2.5s;
+}
+
+@keyframes example {
+0%   { left:-100px; top:0px;}
+25%  {left:100px; top:0px;}
+50%  { left:100px; top:100px;}
+75%  { left:-100px; top:100px;}
+100% {left:-100px; top:0px;}
+}

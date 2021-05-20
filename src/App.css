@@ -8,7 +8,11 @@
   background-repeat:repeat-y;
   background-position: right 50% top 0px;
   background-attachment:fixed;
+  background-size: cover;
   text-align: center; /* Le texte est centré*/
+  padding-top: 10px;
+  width: 100%;
+  min-height: 2000px;
 }
 h1,h2,h3,h4{
   font-family: 'GreekFont';
@@ -17,6 +21,7 @@ h1 { /* Style des gros titres*/
   color:black;
   font-size: 60px;
   text-align: center;
+  
 }
 .content {
     width:100%;

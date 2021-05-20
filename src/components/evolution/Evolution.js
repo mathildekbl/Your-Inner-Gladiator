@@ -50,7 +50,7 @@ export default class Evolution extends React.Component{
             text="Des abdos sont présents sous ce ventre, il faut perdre le poids en trop. On axe sur le cardio";
             image=fatImg;
         }
-        return(<div className="visualResult"><h2>Etat de Forme</h2><h4>{text}</h4><img src={image} alt="Gladiator Pic"/><h2>IMC : {imc.toFixed(2)}</h2></div>);
+        return(<div className="visualResult"><h2>Etat de Forme</h2><h4>{text}</h4><img className="gladanim" src={image} alt="Gladiator Pic"/><h2>IMC : {imc.toFixed(2)}</h2></div>);
     }
     getDetailsPoids(){
         let weightHistory = Weight.getWeightHistory(this.props.who);
@@ -76,7 +76,7 @@ export default class Evolution extends React.Component{
     weightToGoal(weight){
         let gap = weight -  Members.getMember(this.props.who)["targetWeight"];
         if (gap<0){return "Il te reste "+-gap+" kg à prendre. Il va falloir soulever !";}
-        if (gap===0){return "C'est beau un gladiateur qui réussi ses objectifs";}
+        if (gap===0){return "C'est beau un gladiateur qui réussit ses objectifs";}
         return"Il faut perdre ses "+Converter.format("weight",gap)+" en trop. HOP HOP au boulot !";
     }
     render(){
